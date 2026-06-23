@@ -19,6 +19,13 @@ elif [[ "$1" == "--init" ]]; then
     git clone . ./kopia_repo
     export PATH=$PATH:$(pwd)
 
+elif [[ "$1" == "--error" || "$1" == "-e" ]]; then
+    count=${2:-100}
+    mkdir -p error
+    for i in $(seq 1 $count); do
+        echo "Error" > "error/error$i.txt"
+    done
+
 else
     echo "Nieznana opcja. Użyj --help"
 fi
