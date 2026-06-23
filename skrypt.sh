@@ -15,6 +15,10 @@ elif [[ "$1" == "--logs" || "$1" == "-l" ]]; then
         echo "log$i.txt, skrypt.sh, $(date)" > "log$i.txt"
     done
 
+elif [[ "$1" == "--init" ]]; then
+    git clone . ./kopia_repo
+    export PATH=$PATH:$(pwd)
+
 else
     echo "Nieznana opcja. Użyj --help"
 fi
