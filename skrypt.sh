@@ -8,6 +8,8 @@ elif [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "  --date / -d        - Wyświetla datę"
     echo "  --logs / -l        - Tworzy 100 plików log[x].txt"
     echo "  --logs [n] / -l [n]- Tworzy n plików log[x].txt"
+    echo "  --init             - Klonuje repozytorium i modyfikuje PATH"
+    echo "  --error [n] / -e [n] - Tworzy errors/ i tworzy w nim N plików"
 
 elif [[ "$1" == "--logs" || "$1" == "-l" ]]; then
     count=${2:-100}
